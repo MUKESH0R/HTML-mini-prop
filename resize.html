@@ -1,0 +1,58 @@
+<!--  This methord is used to let users controle the height and width of the html elements -->
+<!-- The resize property workes well when overflow is not as visible  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element Resize Property</title>
+    <style>
+        .main-container{
+            display: flex;
+            gap: 20px;
+        }
+        .re-size{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(42, 154, 199);
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            border-radius: 10px;
+            overflow: auto;
+        }
+        .re-size p{
+            margin: 0;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .re-size:nth-child(1){
+            resize: vertical;
+        }
+        .re-size:nth-child(2){
+            resize: horizontal;
+        }
+        .re-size:nth-child(3){
+            resize: both;
+        }
+        span{
+            color: rgb(249, 188, 144);
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="re-size">
+            <p>re-size: <span>vertical</span></p>
+        </div>
+        <div class="re-size">
+            <p>re-size: <span>horizontal</span></p>
+        </div>
+        <div class="re-size">
+            <p>re-size: <span>both</span></p>
+        </div>
+    </div>  
+</body>
+</html>
